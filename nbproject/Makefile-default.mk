@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=
+SOURCEFILES_QUOTED_IF_SPACED=led_message.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=
-POSSIBLE_DEPFILES=
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/led_message.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/led_message.o.d
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES=${OBJECTDIR}/led_message.o
 
 # Source Files
-SOURCEFILES=
+SOURCEFILES=led_message.c
 
 
 CFLAGS=
@@ -74,7 +74,7 @@ FIXDEPS=fixDeps
 .build-conf:  ${BUILD_SUBPROJECTS}
 	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/SublimeGrapheneKit.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=32MX440F256H
+MP_PROCESSOR_OPTION=32MX360F512L
 MP_LINKER_FILE_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
@@ -91,7 +91,19 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/led_message.o: led_message.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/led_message.o.d 
+	@${RM} ${OBJECTDIR}/led_message.o 
+	@${FIXDEPS} "${OBJECTDIR}/led_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/led_message.o.d" -o ${OBJECTDIR}/led_message.o led_message.c   
+	
 else
+${OBJECTDIR}/led_message.o: led_message.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/led_message.o.d 
+	@${RM} ${OBJECTDIR}/led_message.o 
+	@${FIXDEPS} "${OBJECTDIR}/led_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/led_message.o.d" -o ${OBJECTDIR}/led_message.o led_message.c   
+	
 endif
 
 # ------------------------------------------------------------------------------------

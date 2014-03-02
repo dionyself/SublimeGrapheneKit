@@ -5,9 +5,9 @@
             <name>SublimeGrapheneKit</name>
             <creation-uuid>4dbd8ea1-e8aa-4dc0-bd92-7d0561b78096</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
